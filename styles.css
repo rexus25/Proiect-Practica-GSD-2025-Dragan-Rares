@@ -1,0 +1,1118 @@
+/* Reset și baza */ 
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: Arial, sans-serif; 
+} 
+
+body { 
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0); 
+  color: #333; 
+  line-height: 1.6; 
+  transition: background 0.3s, color 0.3s; 
+} 
+
+body.dark-mode { 
+  background: #121212; 
+  color: #f0f0f0; 
+} 
+
+/* Header */ 
+header { 
+  background: rgba(34, 34, 34, 0.9); 
+  color: #fff; 
+  padding: 20px 40px; 
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 10; 
+  transition: box-shadow 0.3s, background 0.3s; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+} 
+
+header.scrolled { 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+  background: rgba(34, 34, 34, 1); 
+} 
+
+/* Nav */ 
+nav ul { 
+  display: flex; 
+  list-style: none; 
+  gap: 20px; 
+} 
+
+nav a { 
+  color: white; 
+  text-decoration: none; 
+  position: relative; 
+  transition: 0.3s; 
+} 
+
+nav a::after { 
+  content: ''; 
+  position: absolute; 
+  width: 0; 
+  height: 2px; 
+  left: 0; 
+  bottom: -3px; 
+  background: #ffcc00; 
+  transition: 0.3s; 
+} 
+
+nav a:hover::after, 
+nav a.active::after { 
+  width: 100%; 
+} 
+
+/* Hero Section */ 
+.hero { 
+  background: url('images/hero-enduro.jpg') center/cover no-repeat; 
+  height: 90vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+  color: white; 
+  position: relative; 
+} 
+
+.hero::after { 
+  content: ''; 
+  position: absolute; 
+  inset: 0; 
+  background: rgba(0,0,0,0.5); 
+} 
+
+.hero-content { 
+  position: relative; 
+  z-index: 1; 
+} 
+
+.hero h2 { 
+  font-size: 3rem; 
+  margin-bottom: 10px; 
+} 
+
+.hero p { 
+  font-size: 1.2rem; 
+  margin-bottom: 20px; 
+} 
+
+.btn { 
+  display: inline-block; 
+  background: #ffcc00; 
+  color: #222; 
+  padding: 12px 25px; 
+  border-radius: 5px; 
+  text-decoration: none; 
+  font-weight: bold; 
+  transition: transform 0.3s, background 0.3s; 
+} 
+
+.btn:hover { 
+  background: #e6b800; 
+  transform: scale(1.05); 
+} 
+* Carousel */ 
+.carousel-section { 
+  text-align: center; 
+  padding: 80px 20px; 
+  position: relative; 
+} 
+
+.carousel { 
+  display: flex; 
+  overflow: hidden; 
+  gap: 20px; 
+  justify-content: center; 
+  scroll-behavior: smooth; 
+} 
+
+.carousel-item { 
+  min-width: 250px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+  overflow: hidden; 
+  transition: transform 0.3s; 
+} 
+
+.carousel-item img { 
+  width: 100%; 
+  display: block; 
+} 
+
+.carousel-item p { 
+  padding: 10px; 
+  background: #fff; 
+  font-weight: bold; 
+} 
+
+/* Carousel */ 
+.carousel-section { 
+  text-align: center; 
+  padding: 80px 20px; 
+  position: relative; 
+} 
+
+.carousel { 
+  display: flex; 
+  overflow: hidden; 
+  gap: 20px; 
+  justify-content: center; 
+  scroll-behavior: smooth; 
+} 
+
+.carousel-item { 
+  min-width: 250px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+  overflow: hidden; 
+  transition: transform 0.3s; 
+} 
+
+.carousel-item img { 
+  width: 100%; 
+  display: block; 
+} 
+
+.carousel-item p { 
+  padding: 10px; 
+  background: #fff; 
+  font-weight: bold; 
+} 
+
+.carousel-item:hover { 
+  transform: scale(1.05); 
+} 
+/* Sections */ 
+section { 
+  padding: 80px 40px; 
+  opacity: 0; 
+  transform: translateY(50px); 
+  transition: all 0.7s ease-out; 
+} 
+
+section.visible { 
+  opacity: 1; 
+  transform: translateY(0); 
+} 
+
+/* Form */ 
+form { 
+  background: #f9f9f9; 
+  padding: 30px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+  max-width: 600px; 
+  margin: 0 auto; 
+} 
+
+form select, 
+form input[type="radio"], 
+form input[type="checkbox"] { 
+  margin: 10px 0; 
+} 
+
+form label { 
+  display: block; 
+  margin: 5px 0; 
+  cursor: pointer; 
+} 
+
+form select, 
+form input[type="text"], 
+form input[type="number"] { 
+  padding: 10px; 
+  border-radius: 5px; 
+  border: 1px solid #ccc; 
+  width: 100%; 
+  margin-bottom: 15px; 
+  transition: border 0.3s; 
+} 
+
+form select:focus, 
+form input:focus { 
+  border-color: #ffcc00; 
+  outline: none; 
+} 
+
+/* Button */ 
+button { 
+  background: #ffcc00; 
+  border: none; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  transition: background 0.3s, transform 0.3s; 
+  border-radius: 5px; 
+} 
+
+button:hover { 
+  background: #e6b800; 
+  transform: scale(1.05); 
+} 
+
+/* Testimonials */ 
+#testimonials { 
+  text-align: center; 
+  background: #f4f4f4; 
+  padding: 80px 20px; 
+} 
+
+.testimonial { 
+  max-width: 600px; 
+  margin: 20px auto; 
+  background: white; 
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+  transition: transform 0.3s; 
+} 
+
+.testimonial:hover { 
+  transform: scale(1.02); 
+} 
+
+.testimonial span { 
+  display: block; 
+  margin-top: 10px; 
+  font-weight: bold; 
+  color: #ffcc00; 
+} 
+
+/* Footer */ 
+footer { 
+  background: #222; 
+  color: white; 
+  text-align: center; 
+  padding: 20px; 
+} 
+
+footer a { 
+  color: #ffcc00; 
+  margin: 0 10px; 
+  transition: transform 0.3s; 
+} 
+
+footer a:hover { 
+  transform: scale(1.2); 
+} 
+
+/* Dark mode toggle */ 
+.dark-toggle { 
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  background: #ffcc00; 
+  border: none; 
+  padding: 10px 15px; 
+  cursor: pointer; 
+  border-radius: 50%; 
+  font-weight: bold; 
+  transition: background 0.3s; 
+} 
+
+.dark-toggle:hover { 
+  background: #e6b800; 
+} 
+
+/* ---------------------- */
+/*        HERO AREA       */
+/* ---------------------- */
+
+.hero {
+  height: 100vh;                      /* tot ecranul */
+  background-image: url('schimb1.jpg'); /* prima imagine – apare instant */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: white;
+  position: relative;
+
+  transition: background-image 1s ease-in-out;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);        /* overlay frumos */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-btn {
+  margin-top: 20px;
+  padding: 14px 30px;
+  background: #ffcc00;
+  color: #222;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #ffe066;
+  transform: translateY(-3px) scale(1.05);
+}
+
+.cta-btn:active {
+  transform: translateY(0) scale(0.97);
+}
+
+
+.cta-btn { 
+  margin-top: 20px; 
+  padding: 14px 30px; 
+  background: #ffcc00; 
+  color: #222; 
+  font-weight: bold; 
+  text-decoration: none; 
+  border-radius: 50px; 
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4); 
+  transition: 0.3s ease; 
+} 
+
+.cta-btn:hover { 
+  background: #ffe066; 
+  transform: translateY(-3px) scale(1.05); 
+} 
+
+.cta-btn:active { 
+  transform: translateY(0) scale(0.97); 
+} 
+
+.slider-section { 
+  text-align: center; 
+  padding: 80px 20px; 
+} 
+
+.carousel { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 20px; 
+} 
+
+.slide { 
+  width: 350px; 
+  text-align: center; 
+  display: none; 
+} 
+
+.slide img { 
+  width: 100%; 
+  height: 250px; 
+  object-fit: cover; 
+  border-radius: 10px; 
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5); 
+} 
+
+.slide h3 { 
+  margin-top: 10px; 
+  color: #222; 
+} 
+
+#prevBtn, 
+#nextBtn { 
+  background: #ffcc00; 
+  border: none; 
+  padding: 10px 14px; 
+  border-radius: 50%; 
+  cursor: pointer; 
+  font-size: 20px; 
+  transition: 0.3s; 
+} 
+
+#prevBtn:hover, 
+#nextBtn:hover { 
+  background: #ffe066; 
+  transform: scale(1.1); 
+} 
+.carousel-item img {
+  width: 100%;
+  height: 180px;     /* FORȚEAZĂ toate să fie egale */
+  object-fit: cover; /* taie ce e în plus fără să deformeze */
+}
+/* 🏍️ TRANSILVANIA ENDUROM TOURS */
+.tours-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.tours-text {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+}
+
+.tour-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.tour-card {
+  width: 280px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.tour-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.tour-card h3 {
+  margin: 15px 0 5px;
+}
+
+/* BOOK NOW – buton profesional */
+.book-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 18px;
+  background: #ffcc00;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;s
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.book-btn:hover {
+  background: #e6b800;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.book-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 240px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  background: white;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.carousel-item p {
+  padding: 10px;
+  font-weight: bold;
+}
+/* 🌟 Socials Section */
+.social-section {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.social-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* distanță între iconițe */
+  margin-top: 20px;
+}
+
+.icon {
+  font-size: 50px; /* mărimea iconițelor */
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.icon.instagram { color: #E1306C; }
+.icon.tiktok { color: #000; }
+.icon.youtube { color: #FF0000; }
+.icon.facebook { color: #1877F2; }
+
+.icon:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+/* 🔹 STATS SECTION – Enduro Numbers */
+.stats-section {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.stats-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.stats-subtitle {
+  margin-bottom: 40px;
+  font-size: 1.05rem;
+  color: #555;
+}
+
+.stats-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.stat-number {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #ffcc00;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* 🔹 STATS SECTION – Numbers + Icons */
+.stats-section {
+  max-width: 1100px;
+  margin: 80px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.stat-card {
+  background: #ffffff;
+  color: #fff;
+  border-radius: 18px;
+  padding: 25px 15px 30px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+}
+
+.stat-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: #ffcc00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.stat-number {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-section {
+    grid-template-columns: 1fr;
+  }
+}
+/* 🔥 ABOUT US SECTION */
+.about-section {
+  padding: 80px 0;
+  background: #f6f6f6;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.about-img {
+  flex: 1;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 2.4rem;
+  }
+}
+/* 🔻 FOOTER + SPONSORS – INDEX */
+#footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 25px 20px 20px;   /* mai mare decât înainte */
+}
+
+.footer-sponsors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;           /* dacă ecranul e mic, trec pe două rânduri */
+}
+
+.footer-sponsors img {
+  height: 32px;              /* dimensiunea logo-urilor */
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: filter 0.2s, opacity 0.2s, transform 0.2s;
+}
+
+.footer-sponsors img:hover {
+  filter: none;
+  opacity: 1;
+  transform: translateY(-2px);
+}
+/* 🔹 SECTION 1 – Why Ride With Endurom */
+.why-us {
+  padding: 80px 40px;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.why-us h2 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.why-us-subtitle {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.why-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 25px 20px 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+}
+
+.why-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: #ffcc00;
+}
+
+.why-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.why-card p {
+  font-size: 0.98rem;
+  color: #555;
+}
+
+/* Responsive – pe telefon, carduri pe un singur coloană */
+@media (max-width: 900px) {
+  .why-us {
+    padding: 60px 20px;
+  }
+
+  .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* 🔥 MEET THE GUIDES */
+.guides-section {
+  padding: 80px 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.guides-section h2 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.guides-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.guide-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.guide-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+}
+
+.guide-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.guide-card h3 {
+  margin: 8px 0 3px;
+  font-size: 1.4rem;
+}
+
+.guide-role {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #ffcc00;
+  margin-bottom: 12px;
+}
+
+.guide-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* 📱 Responsive design */
+@media (max-width: 900px) {
+  .guides-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* 🔹 BLOG – LISTA DE ARTICOLE (carduri) */
+/* 🔥 TIPS & TRICKS – titlu mare și centrat */
+.blog-section {
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;        /* centrează tot ce e direct în secțiune (titlu + subtitlu) */
+}
+
+/* titlul "Tips & Tricks" */
+.blog-section h2 {
+  font-size: 3rem;           /* mai mare */
+  font-weight: 900;          /* foarte bold */
+  margin-bottom: 10px;
+}
+
+/* textul de sub titlu: "Learn more before booking your adventure." */
+.blog-section > p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;       /* spațiu între text și carduri */
+}
+
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.blog-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.blog-card-body {
+  padding: 20px 22px 18px;
+}
+
+.blog-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.blog-card-excerpt {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+/* 🔸 buton Read more */
+.blog-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #5b21ff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(91, 33, 255, 0.06);
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+}
+
+.blog-read-more span {
+  font-size: 1.1rem; /* să se vadă frumos săgeata → */
+}
+
+.blog-read-more:hover {
+  background: rgba(91, 33, 255, 0.16);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+/* 🔹 BLOG ARTICLE PAGE – layout general */
+.blog-article-wrapper {
+  max-width: 900px;
+  margin: 80px auto 100px;
+  padding: 0 20px;
+}
+
+.blog-article-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.blog-article-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.blog-article-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 22px;
+}
+
+.blog-article-hero {
+  width: 100%;
+  height: 320px;
+  border-radius: 18px;
+  object-fit: cover;
+  margin-bottom: 28px;
+}
+
+.blog-article-content p {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.blog-article-content h2 {
+  font-size: 1.5rem;
+  margin: 26px 0 10px;
+}
+
+.blog-article-content ul {
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+
+.blog-article-content li {
+  margin-bottom: 6px;
+}
+
+/* 🔙 back button */
+.blog-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.25s, transform 0.2s;
+}
+
+.blog-back-link:hover {
+  background: #ffcc00;
+  color: #111;
+  transform: translateY(-2px);
+}
+/* 🚀 FORCE Big Title for Tips & Tricks */
+.tips-title {
+    font-size: 3.5rem !important;
+    font-weight: 900 !important;
+    text-align: center !important;
+    color: #000 !important;
+    margin-top: 40px !important;
+    margin-bottom: 10px !important;
+}
+
+.tips-subtitle {
+    font-size: 1.5rem !important;
+    text-align: center !important;
+    color: #444 !important;
+    margin-bottom: 40px !important;
+}
+
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endurom | Book a Tour</title>
+  <link rel="stylesheet" href="book-tours.css">
+</head>
+<!-- 🔥 CUSTOM BOOKING PAGE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&display=swap" rel="stylesheet">
+<body>
+
+<!-- 🔹 HEADER -->
+  <header class="bt-header">
+    <div class="bt-logo">
+      <a href="index.html">ENDUROM</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#booking">Book Tour</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="hero-simple">
+    <h1>Book Your Transilvania Endurom Tour</h1>
+    <p>Choose your date, bike & package — we’ll handle the adventure.</p>
+</section>
+
+    <section class="bt-booking-container">
+      
+      <!-- 🔸 STÂNGA: FORMULAR -->
+      <form id="booking-form" class="bt-form">
+        <h2>Tour Details</h2>
+
+        <label for="tour-date">Tour date</label>
+        <input type="date" id="tour-date" required>
+
+        <label for="duration">Duration</label>
+        <select id="duration">
+          <option value="3">3 day</option>
+          <option value="4">4 days</option>
+          <option value="5">5 days</option>
+          <option value="6">6 days</option>
+          <option value="7">7 days</option>
+        </select>
+
+        <label for="riders">Number of riders</label>
+        <input type="number" id="riders" min="1" max="8" value="1">
+
+        <label>Package</label>
+        <div class="bt-radio-group">
+          <label><input type="radio" name="package" value="normal" checked> Normal</label>
+          <label><input type="radio" name="package" value="premium"> Premium</label>
+        </div>
+
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty">
+          <option>Beginner</option>
+          <option>Intermediate</option>
+          <option>Hard Enduro</option>
+        </select>
+
+        <label for="bike">Preferred bike</label>
+        <select id="bike">
+          <option>KTM 300 EXC (Champion)</option>
+          <option>KTM 300 EXC (Stock)</option>
+          <option>KTM 300 EXC Six Days</option>
+          <option>KTM 300 EXC Hard Enduro</option>
+          <option>Beta RR 300</option>
+          <option>Husqvarna TE 300</option>
+          <option>Sherco 300 SE-R</option>
+          <option>GasGas EC 300</option>
+        </select>
+
+        <h3>Extras</h3>
+        <div class="bt-checkbox-group">
+          <label><input type="checkbox" id="extra-gear"> Gear rental (+20€ / rider / day)</label>
+          <label><input type="checkbox" id="extra-photo"> Photo & video pack (+50€ / tour)</label>
+          <label><input type="checkbox" id="extra-transfer"> Airport transfer (+40€ / group)</label>
+        </div>
+
+        <h2>Rider Info</h2>
+        <label for="name">Full name</label>
+        <input type="text" id="name" placeholder="Your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@email.com" required>
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" placeholder="+40..." required>
+
+        <button type="submit" class="bt-book-btn">Book now</button>
+      </form>
+
+      <!-- 🔸 DREAPTA: SUMAR & PREȚ -->
+      <aside class="bt-summary">
+        <h2>Booking Summary</h2>
+        <ul>
+          <li><strong>Date:</strong> <span id="summary-date">–</span></li>
+          <li><strong>Duration:</strong> <span id="summary-duration">1 day</span></li>
+          <li><strong>Riders:</strong> <span id="summary-riders">1</span></li>
+          <li><strong>Package:</strong> <span id="summary-package">Normal</span></li>
+          <li><strong>Difficulty:</strong> <span id="summary-difficulty">Beginner</span></li>
+          <li><strong>Bike:</strong> <span id="summary-bike">KTM 300 EXC (Champion)</span></li>
+          <li><strong>Extras:</strong> <span id="summary-extras">None</span></li>
+        </ul>
+
+        <div class="bt-price-box">
+          <p>Estimated price</p>
+          <h3 id="summary-price">0 €</h3>
+          <small>* Final price will be confirmed by email.</small>
+        </div>
+      </aside>
+    </section>
+
+    <!-- 🔹 FAQ -->
+    <section id="faq" class="bt-faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Do I need my own bike?</summary>
+        <p>No, you can rent one of our bikes. Just choose a model in the booking form.</p>
+      </details>
+      <details>
+        <summary>What riding level is required?</summary>
+        <p>We have tours for beginners, intermediate riders, and hard enduro maniacs.</p>
+      </details>
+      <details>
+        <summary>Is gear included?</summary>
+        <p>Gear rental is optional and can be added as an extra in the booking form.</p>
+      </details>
+    </section>
+  </main>
+
+<!-- 🔻 FOOTER – BOOK TOURS -->
+<footer class="bt-footer">
+  <div class="footer-sponsors">
+    <img src="ktm.jpg" alt="KTM Sponsor">
+    <img src="husqvarna1.jpg" alt="Husqvarna Sponsor">
+    <img src="redbull2.jpg" alt="Red Bull Sponsor">
+    <img src="motorex.jpg" alt="Motorex Sponsor">
+    <img src="fox.jpg" alt="Fox Sponsor">
+    <img src="airoh.jpg" alt="Alpinestars Sponsor">
+  </div>
+
+  <p>&copy; 2025 ENDUROM – Transilvania Endurom Tours. All rights reserved.</p>
+</footer>
+
+  <script src="book-tours.js"></script>
+</body>
+</html>
