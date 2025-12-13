@@ -1,78 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to Prepare for Your First Enduro Tour | Endurom</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENDUROM | How to Prepare for Your First Enduro Tour</title>
+
+  <!-- 🔹 BLOG POST CSS (un singur CSS pentru toate postările) -->
+  <link rel="stylesheet" href="blog.posts.css" />
 </head>
 <body>
 
-<header id="header">
-  <nav>
-    <ul>
-      <li><a href="index.html#hero">Home</a></li>
-      <li><a href="index.html#tours">Tours</a></li>
-      <li><a href="index.html#blog">Blog</a></li>
-      <li><a href="book-tours.html">Book a Tour</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- 🔹 TOP BAR -->
+  <header class="post-topbar">
+    <a class="post-brand" href="index.html">ENDUROM</a>
+    <nav class="post-nav">
+      <a href="index.html#tours">Tours</a>
+      <a href="index.html#blog">Tips & Tricks</a>
+      <a href="book-tours.html">Book</a>
+    </nav>
+  </header>
 
-<main style="padding: 100px 20px 60px; max-width: 900px; margin: 0 auto;">
-  <h1 style="margin-bottom: 10px;">How to Prepare for Your First Enduro Tour</h1>
-  <p style="color:#777; margin-bottom: 25px;">Tips for your first adventure ride in Transylvania</p>
+  <!-- 🔹 HERO -->
+  <section class="post-hero">
+    <img class="post-hero-img" src="first.jpg" alt="Enduro rider in the mountains" />
+    <div class="post-hero-overlay"></div>
+    <div class="post-hero-content">
+      <p class="post-kicker">Tips & Tricks</p>
+      <h1>How to Prepare for Your First Enduro Tour</h1>
+      <p class="post-subtitle">What to pack, how to train, and what to expect on the trails of Transilvania.</p>
+    </div>
+  </section>
 
-  <h2>1. Choose the right level</h2>
-  <p>
-    The most important thing is to be honest about your riding level.  
-    If it’s your first time off-road, start with a beginner or easy-intermediate tour.  
-    You’ll still ride beautiful trails, but without feeling overwhelmed or exhausted.
-  </p>
+  <!-- 🔹 CONTENT -->
+  <main class="post-wrap">
+    <article class="post-article">
+      <div class="post-meta">
+        <span>Reading time: ~5 min</span>
+        <span>Updated: 2025</span>
+      </div>
 
-  <h2>2. Basics of physical preparation</h2>
-  <p>
-    You don’t need to be a pro athlete, but being in decent shape helps a lot.  
-    A few weeks before the tour, try to:
-  </p>
-  <ul>
-    <li>Do light cardio (running, cycling, hiking) 2–3 times per week</li>
-    <li>Train legs and core – squats, lunges, planks</li>
-    <li>Stretch – hips, hamstrings, lower back</li>
-  </ul>
+      <h2>1) Gear checklist</h2>
+      <ul>
+        <li>Helmet + goggles (clear & tinted lens)</li>
+        <li>Boots + knee protection</li>
+        <li>Gloves + hydration pack</li>
+        <li>Rain layer / windbreaker</li>
+        <li>Basic meds (band-aids, painkillers)</li>
+      </ul>
 
-  <h2>3. Gear you actually need</h2>
-  <p>
-    At minimum, you should have: helmet, boots, gloves, goggles, knee and elbow protection.  
-    A chest protector and neck brace are highly recommended, especially for hard enduro.
-  </p>
+      <h2>2) Bike setup</h2>
+      <p>
+        Make sure your levers are adjusted, tire pressure is correct for terrain,
+        chain tension is OK, and you’ve got a fresh air filter. If you rent from us,
+        we handle this for you.
+      </p>
 
-  <h2>4. Hydration and nutrition</h2>
-  <p>
-    Riding enduro is more intense than most people think. Bring:
-  </p>
-  <ul>
-    <li>A hydration backpack (1.5–3L of water)</li>
-    <li>Energy bars or snacks</li>
-    <li>Electrolyte tablets if you sweat a lot</li>
-  </ul>
+      <h2>3) Fitness & technique</h2>
+      <p>
+        Before your first tour, focus on endurance (easy running/cycling), plus basic
+        bike control: standing position, braking, and balance. We’ll coach you on the trail.
+      </p>
 
-  <h2>5. Mental preparation</h2>
-  <p>
-    The goal is not to “survive” the tour, but to enjoy it.  
-    You’ll make mistakes, stall the bike, maybe drop it – it’s normal.  
-    Our guides are there to help you, not to judge you.
-  </p>
+      <h2>4) Safety basics</h2>
+      <p>
+        Ride within your limits, keep distance, and communicate with the group.
+        A good tour feels fast *and* safe.
+      </p>
 
-  <p style="margin-top: 25px; font-weight: bold;">
-    Ready to ride?  
-    <a href="book-tours.html">Book your first Endurom tour here.</a>
-  </p>
-</main>
+      <div class="post-callout">
+        <h3>Pro tip</h3>
+        <p>Bring two pairs of gloves. Wet gloves = bad day. Dry gloves = hero.</p>
+      </div>
+    </article>
 
-<footer style="background:#222;color:#fff;text-align:center;padding:15px;">
-  <p>&copy; 2025 ENDUROM – Transilvania Endurom Tours</p>
-</footer>
+    <!-- 🔹 SIDEBAR (cu harta) -->
+    <aside class="post-side">
+      <div class="post-card">
+        <h3>Trail area</h3>
+        <p>Start point example: Sibiu / Păltiniș.</p>
+
+        <!-- ✅ Google Maps Embed (fără API key) -->
+        <div class="post-map">
+          <iframe
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Paltinis,Sibiu,Romania&output=embed">
+          </iframe>
+        </div>
+
+        <a class="post-btn" href="book-tours.html">Book a Tour</a>
+      </div>
+
+      <div class="post-card">
+        <h3>More posts</h3>
+        <a class="post-link" href="standard vs premium.html">Standard vs Premium</a>
+        <a class="post-link" href="top trails.html">Top 5 trails</a>
+      </div>
+    </aside>
+  </main>
+
+  <!-- 🔹 FOOTER -->
+  <footer class="post-footer">
+    <p>© 2025 ENDUROM – Transilvania Endurom Tours</p>
+  </footer>
 
 </body>
 </html>
+
