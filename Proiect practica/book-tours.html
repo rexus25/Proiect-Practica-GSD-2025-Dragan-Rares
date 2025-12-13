@@ -82,6 +82,20 @@
           <label><input type="checkbox" id="extra-transfer"> Airport transfer (+40€ / group)</label>
         </div>
 
+        <!-- 🏨 ACCOMMODATION -->
+<h3>Accommodation</h3>
+
+<label for="hotel">Hotel (breakfast included)</label>
+<select id="hotel">
+  <option value="none">No accommodation</option>
+  <option value="ramada">Ramada Sibiu — ★★★★ — premium rooms</option>
+  <option value="mercure">Mercure Sibiu — ★★★★ — premium + wellness</option>
+  <option value="hermans">Hermans Hotel Sibiu — ★★★★ — pool & spa</option>
+  <option value="continental">Continental Forum Sibiu — ★★★★ — city center, great comfort</option>
+</select>
+
+<p class="bt-hint">All hotels include breakfast. Accommodation price is added per rider / night.</p>
+
         <h2>Rider Info</h2>
         <label for="name">Full name</label>
         <input type="text" id="name" placeholder="Your name" required>
@@ -106,6 +120,8 @@
           <li><strong>Difficulty:</strong> <span id="summary-difficulty">Beginner</span></li>
           <li><strong>Bike:</strong> <span id="summary-bike">KTM 300 EXC (Champion)</span></li>
           <li><strong>Extras:</strong> <span id="summary-extras">None</span></li>
+          <li><strong>Hotel:</strong> <span id="summary-hotel">None</span></li>
+
         </ul>
 
         <div class="bt-price-box">
