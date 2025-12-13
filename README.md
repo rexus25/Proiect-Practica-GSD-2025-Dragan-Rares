@@ -60,5 +60,5 @@ No backend or real payment system is implemented
 Booking functionality is simulated for practice purposes
 
 👨‍🎓 Author
-Created by [Your Name]
+Created by Dragan Rares
 Practice project for web development
