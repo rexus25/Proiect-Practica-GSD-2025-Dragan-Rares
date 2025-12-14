@@ -1114,5 +1114,206 @@ footer a:hover {
     color: #444 !important;
     margin-bottom: 40px !important;
 }
+/* =========================
+   DARK MODE – GLOBAL FIX
+   (pune la FINAL de CSS)
+   ========================= */
+
+body.dark-mode {
+  background: #0f1115;
+  color: #e9eef6;
+}
+
+/* toate titlurile și textele */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode label,
+body.dark-mode li {
+  color: #e9eef6;
+}
+
+/* text “mut” / subtitluri */
+body.dark-mode .subtitle,
+body.dark-mode .section-subtitle,
+body.dark-mode .muted,
+body.dark-mode small {
+  color: #b8c0cc !important;
+}
+
+/* Secțiuni pe fundal negru */
+body.dark-mode section {
+  background: transparent;
+}
+
+/* Carduri (Guides / Blog / Why Ride / Tours cards etc.) */
+body.dark-mode .card,
+body.dark-mode .guide-card,
+body.dark-mode .blog-card,
+body.dark-mode .tour-card,
+body.dark-mode .feature-card,
+body.dark-mode .testimonial,
+body.dark-mode .bt-form,
+body.dark-mode .bt-summary {
+  background: #161a22 !important;
+  color: #e9eef6 !important;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.45) !important;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* texte din carduri */
+body.dark-mode .guide-card p,
+body.dark-mode .blog-card p,
+body.dark-mode .tour-card p,
+body.dark-mode .testimonial p {
+  color: #cfd6e2 !important;
+}
+
+/* Inputs / select */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background: #0f1115;
+  color: #e9eef6;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #9aa3b2;
+}
+
+/* Navbar în dark mode */
+body.dark-mode header,
+body.dark-mode .bt-header {
+  background: rgba(18, 20, 26, 0.92) !important;
+}
+
+/* Link-uri */
+body.dark-mode a {
+  color: #ffd84d;
+}
+
+body.dark-mode a:hover {
+  color: #ffe680;
+}
+
+/* Butoane galbene să rămână ok */
+body.dark-mode .cta-btn,
+body.dark-mode button,
+body.dark-mode .bt-book-btn,
+body.dark-mode .book-btn {
+  color: #111 !important;
+}
+
+/* About Us layout (dacă ai text pe alb înainte) */
+body.dark-mode .about-section,
+body.dark-mode .about-wrap,
+body.dark-mode .about-content {
+  background: transparent !important;
+}
+
+/* Blog “Read more” să nu fie mov/albastru dubios */
+body.dark-mode .read-more,
+body.dark-mode .blog-card a {
+  color: #ffd84d !important;
+  text-decoration: none;
+}
+
+body.dark-mode .blog-card a:hover {
+  text-decoration: underline;
+}
+
+/* Icon circle (dacă ai cerc alb la stats/features) */
+body.dark-mode .icon-circle,
+body.dark-mode .stat-icon {
+  background: #0f1115 !important;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+/* ================================
+   DARK MODE FIX – cards + hero
+   Pune blocul ăsta la FINAL în styles.css
+================================ */
+
+/* 1) Fundal + text general */
+body.dark-mode {
+  background: #0f1115 !important;
+  color: #e9edf5 !important;
+}
+
+/* 2) Hero (pozele de sus) – nu le lăsa să fie acoperite/omorâte de overlay */
+body.dark-mode .hero,
+body.dark-mode .hero-book {
+  background-color: #0f1115;         /* fallback dacă poza nu se încarcă */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* dacă ai overlay pe hero (pseudo element sau div), îl facem mai “light” */
+body.dark-mode .hero::after,
+body.dark-mode .hero-book::after,
+body.dark-mode .hero-overlay {
+  background: rgba(0,0,0,0.35) !important;   /* înainte probabil era prea tare */
+}
+
+/* 3) Toate cardurile care îți rămân albe (stats / why / testimonials / etc.) */
+body.dark-mode .card,
+body.dark-mode .stats-card,
+body.dark-mode .stat-card,
+body.dark-mode .why-card,
+body.dark-mode .feature-card,
+body.dark-mode .testimonial,
+body.dark-mode .guide-card,
+body.dark-mode .blog-card,
+body.dark-mode .tour-card,
+body.dark-mode form,
+body.dark-mode .bt-form,
+body.dark-mode .bt-summary {
+  background: #171a21 !important;
+  color: #e9edf5 !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35) !important;
+}
+
+/* 4) Text “muted” (descrieri, subtitluri) */
+body.dark-mode p,
+body.dark-mode .muted,
+body.dark-mode .subtitle,
+body.dark-mode .section-subtitle {
+  color: #b9c2d0 !important;
+}
+
+/* 5) Titluri din carduri (să nu fie albe pe alb / sau prea faded) */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+  color: #ffffff !important;
+}
+
+/* 6) Inputs/select-uri (să nu rămână albe orbitoare) */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background: #0f1115 !important;
+  color: #e9edf5 !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
+}
+
+/* 7) Iconițele rotunde deasupra numerelor (să arate bine pe dark) */
+body.dark-mode .stat-icon,
+body.dark-mode .icon-circle {
+  background: #0f1115 !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
+}
+
+/* 8) Dacă ai texte “spălate” (opacity mic) pe secțiuni dark */
+body.dark-mode .why-card *,
+body.dark-mode .feature-card *,
+body.dark-mode .stat-card * {
+  opacity: 1 !important;
+}
 
 
