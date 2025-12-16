@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENDUROM | Gallery</title>
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+
+  <!-- 🔹 GALLERY HEADER -->
+  <header class="g-header">
+    <a class="g-logo" href="index.html">ENDUROM</a>
+
+    <nav class="g-nav">
+      <a href="index.html">Home</a>
+      <a href="book-tours.html">Book Tours</a>
+      <a class="active" href="gallery.html">Gallery</a>
+    </nav>
+  </header>
+
+  <!-- 🔹 HERO -->
+  <section class="g-hero">
+    <div class="g-hero-content">
+      <h1>Photo Gallery</h1>
+      <p>Trails, bikes, action — Transilvania Endurom Tours.</p>
+    </div>
+  </section>
+
+  <!-- 🔹 FILTERS -->
+  <main class="g-main">
+    <div class="g-filters">
+      <button class="g-filter active" data-filter="all">All</button>
+      <button class="g-filter" data-filter="trails">Trails</button>
+      <button class="g-filter" data-filter="bikes">Bikes</button>
+      <button class="g-filter" data-filter="riders">Riders</button>
+    </div>
+
+    <!-- 🔹 GRID -->
+    <section class="g-grid" id="galleryGrid">
+      <!-- Pune pozele tale în /images/gallery/ -->
+      <figure class="g-card" data-category="trails">
+        <img src="images/gallery/trail1.jpg" alt="Trail 1" loading="lazy" />
+      </figure>
+
+      <figure class="g-card" data-category="trails">
+        <img src="images/gallery/trail2.jpg" alt="Trail 2" loading="lazy" />
+      </figure>
+
+      <figure class="g-card" data-category="bikes">
+        <img src="images/gallery/bike1.jpg" alt="Bike 1" loading="lazy" />
+      </figure>
+
+      <figure class="g-card" data-category="bikes">
+        <img src="images/gallery/bike2.jpg" alt="Bike 2" loading="lazy" />
+      </figure>
+
+      <figure class="g-card" data-category="riders">
+        <img src="images/gallery/rider1.jpg" alt="Rider 1" loading="lazy" />
+      </figure>
+
+      <figure class="g-card" data-category="riders">
+        <img src="images/gallery/rider2.jpg" alt="Rider 2" loading="lazy" />
+      </figure>
+
+      <figure class="g-card" data-category="trails">
+        <img src="images/gallery/trail3.jpg" alt="Trail 3" loading="lazy" />
+      </figure>
+
+      <figure class="g-card" data-category="bikes">
+        <img src="images/gallery/bike3.jpg" alt="Bike 3" loading="lazy" />
+      </figure>
+    </section>
+  </main>
+
+  <!-- 🔹 LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <img id="lbImg" alt="Preview" />
+  </div>
+
+  <!-- 🔹 FOOTER -->
+  <footer class="g-footer">
+    <p>&copy; 2025 ENDUROM – Transilvania Endurom Tours</p>
+  </footer>
+
+  <script src="gallery.js"></script>
+</body>
+</html>
